@@ -1,2 +1,2 @@
 # Portfolio
-This is my protfolio
+i am a <strong>Front-End webdeveloper</strong> with 1 year experience in freelening

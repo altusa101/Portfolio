@@ -16,3 +16,6 @@ function dropDownHeroTxt(){
 }
 
 setTimeout(dropDownHeroTxt,2000)
+
+
+    // animation for home elements
