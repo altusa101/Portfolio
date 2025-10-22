@@ -7,7 +7,7 @@
     <title>prtfolio</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="https://kit.fontawesome.com/3c05ca2980.js" crossorigin="anonymous"></script>
-    </head>
+     </head>
 <body>
 
     <div class="navbar">
@@ -27,7 +27,7 @@
 
 
     <!-- <video id="indexVideo2" src="src/videoplayback.mp4" loop autoplay muted playsinline></video> -->
-    <model-viewer 
+    <model-viewer class="viewer1"
         src="src/space_boi.glb"
         autoplay
         auto-rotate
@@ -49,7 +49,18 @@
     <h1 id="proLogo">Projects</h1>
     
     <div id="theProjects">
-        <h2 id="gr">Upcomming GREAT Projects</h2>
+        <h2 id="gr">
+            <img src="src/spaceLpanetsSvg.png" width="60px" id="testfr1">
+            Upcomming GREAT Projects</h2>
+
+<div class="planet">
+    <model-viewer class="viewer2"
+        src="src/stylized_planet.glb"  
+        alt="A 3D model"
+        auto-rotate
+    >
+    </model-viewer>
+</div>
 
         <div class="card zoroOs">
             
@@ -66,15 +77,18 @@
                 <div class="image-group" id="group-2">
                     <h3 id="num" class="lg">#2</h3>
                     <h3 id="name">Altus</h3>
-                    <img class="img-base img2" src="src/project/ai-7977960_1280.jpg" style="left: 10%; top: 10%;">
-                    <img class="img-base imgC2" src="src/project/Zero Os_20251021_173645_0000.png" style="left: 40%; top: 40%;">
+                    <div class="gradient1 img-base" style="left: -10px; top: 25%;" ></div>
+                    <img class="img-base img2" src="src/project/ai-7977960_1280.jpg" style="left: 30%; top: 40%;">
+                    <img class="img-base imgC2" src="src/project/altus.png" style="left: 6%; top: 6%;">
+                    
                 </div>
 
                 <div class="image-group" id="group-3">
                     <h3 id="num" class="lg">#3</h3>
                     <h3 id="name">gaming engin</h3>
-                    <img class="img-base img3" src="src/project/top-game-engines-1.webp" style="left: 15%; top: 30%;">
-                    <img class="img-base imgC3" src="src/project/Zero Os_20251021_173645_0000.png" style="left: 30%; top: 20%;">
+                    <div class="gradient1 img-base" style="left: 20%; top: 50%;" ></div>
+                    <img class="img-base img3" src="src/project/top-game-engines-1.webp" style="left: 15%; top: 20%;">
+                    <img class="img-base imgC3" src="src/project/ge.png" style="left: -4%; top: 35%;">
                 </div>
 
             </div>
@@ -93,7 +107,7 @@
                     <div class="btn"><button class="view">View <i class="fa-solid fa-arrow-right"></i></button></div>
                 </div>
 
-                <div class="text-step" data-group="group-3">
+                <div class="text-step group3" data-group="group-3">
                     <h2 id="txtHeading">gaming engin</h2>
                     <p id="desc" >A game engine is a complete software framework for building and running video games. Think of it as a massive workshop and toolkit combined; it provides pre-built tools for rendering 2D or 3D graphics, handling physics, playing audio, processing user input, and managing game logic. Engines like Unity or Unreal Engine handle the complex, low-level tasks, allowing developers to focus on creating the unique artwork, story, and gameplay for their project.</p>
                     <div class="btn"><button class="view">View <i class="fa-solid fa-arrow-right"></i></button></div>
@@ -104,8 +118,83 @@
     </div>
 </div>
 
+<div class="exProjects">
+    hii
+    <model-viewer 
+        id="tree"
+        src="src/space_station_4.glb"  
+        alt="A 3D model"
+        camera-orbit="0deg 75deg 105%" 
+        exposer="0.9"
+        style="width: 100%; height: 1200px; background-color: transparent;"
+    >
+    </model-viewer>
+
+<div class="paragraps">
+
+<div class="paras p1">
+    <h3 class="headingOfPara">1. CodeLen</h3>
+    <span class="line l1"></span>
+    <p id="para1">this is the project i worked , and api intigrated images site <br>where user can asscess an images that is on database and then show up to the<br> public it was relly a great project to work on  i worked , and api intigrated images site where user can asscess an images that is on database and then s i worked , and api intigrated images site where user can asscess an images that is on database and then s</p>
+    <div class="buttons">
+        <button class="btn2">View</buttons>
+        <button class="btn2">Github</buttons>
+    </div>
+</div>
+<div class="paras p2">
+    <h3 class="headingOfPara">2. Roots academy</h3>
+    <span class="line l1"></span>
+    <p id="para1">this is the project i worked , and api intigrated images site <br>where user can asscess an images that is on database and then show up to the<br> public it was relly a great project to work on  i worked , and api intigrated images site where user can asscess an images that is on database and then s i worked , and api intigrated images site where user can asscess an images that is on database and then s</p>
+    <div class="buttons">
+        <button class="btn2">View</buttons>
+        <button class="btn2">Github</buttons>
+    </div>
+</div>
+<div class="paras p3">
+    <h3 class="headingOfPara">3. Calculator</h3>
+    <span class="line l1"></span>
+    <p id="para1">this is the project i worked , and api intigrated images site <br>where user can asscess an images that is on database and then show up to the<br> public it was relly a great project to work on  i worked , and api intigrated images site where user can asscess an images that is on database and then s i worked , and api intigrated images site where user can asscess an images that is on database and then s</p>
+    <div class="buttons">
+        <button class="btn2">View</buttons>
+        <button class="btn2">Github</buttons>
+    </div>
+</div>
+<div class="paras p4">
+    <h3 class="headingOfPara">4. Maxhours</h3>
+    <span class="line l1"></span>
+    <p id="para1">this is the project i worked , and api intigrated images site <br>where user can asscess an images that is on database and then show up to the<br> public it was relly a great project to work on  i worked , and api intigrated images site where user can asscess an images that is on database and then s i worked , and api intigrated images site where user can asscess an images that is on database and then s</p>
+    <div class="buttons">
+        <button class="btn2">View</buttons>
+        <button class="btn2">Github</buttons>
+    </div>
+</div>
+
+</div>
+
+    
+</div>
+<div class="aboutMe"></div>
+
+<!-- the about me section  -->
+ <div id="aboutMe">
+<h1 id="headingAB">About Me</h1>
+
+<div id="content">
+<div class="paragraphABT">
+    <p id="paragraph">
+        Hi, I'm Alok. I am a freelencer driven by a passion for translating ideas into tangible, impactful results. My work focuses on data-driven marketing strategy, full-stack development, or visual brand identity.
+In this portfolio, I've highlighted key projects where I've successfully [An Achievement, e.g., grown user engagement, streamlined backend operations, or launched a new product]. I thrive in collaborative environments and am always looking for the next challenge. Let's build something great together."
+   </p>
+</div>
+</div>
+
+ </div>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdn.greensock.com/YOUR-PRIVATE-TOKEN/SplitText.min.js"></script>  
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="main.js"></script>
+
+<script src="main.js" ></script>
 </html>

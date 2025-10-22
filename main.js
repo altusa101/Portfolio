@@ -1,5 +1,4 @@
 
-// hero sec animations 
 
 gsap.from('#logo',{
    y: "-50px",
@@ -129,6 +128,19 @@ gsap.from('#img1',{
     }
 
 })
+gsap.from('.viewer2',{
+   y: "-80px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"260px",
+        end: "600px",
+        scrub:3
+    }
+
+})
 
 
 // Wait for the page to load
@@ -190,3 +202,118 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+const model = document.querySelector("#tree");
+let rotationProxy = {
+  yaw: 0  
+};
+
+gsap.to(rotationProxy, {
+  yaw: 360, 
+  
+  onUpdate: () => {
+    model.cameraOrbit = `${rotationProxy.yaw}deg 75deg 105%`;
+  },
+  
+  scrollTrigger: {
+    trigger: model, 
+    scrub: 1.5, 
+    start: "0px", 
+    end: "700px", 
+    pin: true
+  }
+});
+
+
+
+
+
+gsap.from('.p1',{
+   y: "80px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".exProjects",
+        scroller:"body",
+        markers:false,
+        start:"-50px",
+        end: "10px",
+        scrub:2,
+    }
+})
+gsap.from('.p2',{
+   y: "80px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".exProjects",
+        scroller:"body",
+        markers:false,
+        start:"-30px",
+        end: "20px",
+        scrub:2,
+    }
+})
+
+gsap.from('.p3',{
+   y: "80px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".exProjects",
+        scroller:"body",
+        markers:false,
+        start:"270px",
+        end: "370px",
+        scrub:2
+    }
+})
+gsap.from('.p4',{
+   y: "80px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".exProjects",
+        scroller:"body",
+        markers:false,
+        start:"350px",
+        end: "480px",
+        scrub:2
+    }
+})
+
+// / the about me section
+gsap.from('#aboutMe',{
+   backgroundColor: "black",
+   scrollTrigger:{
+        trigger:".exProjects",
+        scroller:"body",
+        markers:false,
+        start:"950px",
+        end: "1300px",
+        scrub:3
+    }
+
+}) 
+
+
+console.log("hii");
+
+
+gsap.registerPlugin(SplitText)
+let split = SplitText.create("#paragraph",{
+    type:"words"
+})
+console.log(split);
+
+
+gsap.from(split.words,{
+    y:"-20",
+    scrollTrigger:{
+        trigger:"#aboutMe",
+        scroller:"body",
+        markers:false,
+        start:"0px",
+        end: "700px",
+        scrub:3,
+        markers:true
+    }
+})
