@@ -1,6 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lilita+One&family=Playwrite+DE+SAS:wght@100..400&display=swap');
+
 :root{
     --black: black;
-}
+} 
 
 *{
     margin: 0;
@@ -19,14 +22,16 @@ body{
     background-color: black;
     width: 100vw;
     height: 100vh;
+     font-family: "Playwrite DE SAS",Arial, Helvetica, sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 200;
+    font-style: normal;
 }
 
 .navbar{
     width: 100vw;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
+    background: black;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -49,24 +54,25 @@ body{
 }
 .active{
     color: white;
+    font-weight: bold;
 }
 
 
-video{
-    opacity: 30%;
-}
 
 .heroSec{
     width: 100vw;
     height: 96vh;
     position: relative;
+    overflow: hidden;
 }
 #indexVideo2{
     position: absolute;
-    top: 19%;
+    top: 40%;
     right: 6%;
+    transform: rotateY('180deg');
+     transform: rotateX(55deg) scale(1.05);
+    box-shadow: 0 30px 40px -10px rgba(0, 0, 0, 0.4);
 }
-
 #logo{
     height: 100%;
     width: 100px;
@@ -74,4 +80,222 @@ video{
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    opacity: 100%;
+}
+model-viewer {
+        width: 140vw;
+        height: 140vh;
+       position: absolute;
+       top: -25%;
+       left: 50%;
+        border-radius: 8px;
+        background-color: transparent;
+        transform: translateX(-50%);
+        border: 2px solid white;
+    
+      }
+
+#backTxt{
+    color: white;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    font-family: sans-serif;
+    font-size: 250px;
+    transform: translateX(-50%);
+    width: 100vw;
+    text-align: center;
+    
+}
+
+#contcs{
+    width: 80px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.project{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    padding-top: 30PX;
+}
+#proLogo{
+    width: 200px;
+    padding-left: 20px;
+    height: 40px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 5px solid black;
+    padding-top: auto;
+    margin-left: 30px;
+    border-radius: 4px;
+}
+#theProjects{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+   text-align: center;
+    overflow: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-top: 30px;
+}
+
+.imgSec{
+    width: 40vw;
+    height: 50vh;
+    background: rgb(213, 213, 213);
+    position: relative;
+    
+}
+#num{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.txtsec{
+    width: 40vw;
+    height: 60vh;
+    overflow: scroll;
+}
+
+
+.card{
+    width: 100%;
+    min-height:80vh ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+#img1{
+    width: 400px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translateX(-20%);
+}
+#img2{
+    width: 200px;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    border-radius: 8px;
+}
+.img3,.img2{
+    width: 400px;
+}
+
+.imgC3,.imgC2{
+    width: 200px;
+}
+
+
+.gradient1{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: -50px;
+    top: 30%;
+    background: linear-gradient(90deg,rgba(255, 148, 41, 1) 0%, rgba(255, 252, 199, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+#name{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+#txtHeading{
+    width: 96%;
+    text-align: left;
+    height: 50px;
+    font-size: 50px;
+}
+#desc{
+  width: 80%;
+  margin-top: 10px;
+  text-align: left;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.view{
+    width: 70px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid black ;
+    border-radius: 6px;
+    font-weight: bold; 
+}
+
+.btn{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.text-step {
+    height: 60vh; /* This MUST match your .txtsec height */
+    padding-top: 50px; /* Adjust as needed */
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    border: 2px solid red;
+}
+
+/* Make your .txtsec scrollbar hidden (you already had this) */
+.txtsec {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.txtsec::-webkit-scrollbar {
+    display: none;
+}
+
+/* This is our new image group wrapper.
+It stacks all groups on top of each other and hides them.
+*/
+.image-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    /* Hide all groups by default */
+    opacity: 0;
+    
+    /* Add a nice fade transition */
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* The .is-active class (added by JS) makes the group visible.
+*/
+.image-group.is-active {
+    opacity: 1;
+}
+
+/* This is your old .img class, renamed. 
+It now positions images relative to their .image-group parent.
+*/
+.img-base {
+    position: absolute; /* This is fine */
 }

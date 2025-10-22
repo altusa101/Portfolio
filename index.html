@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prtfolio</title>
-</head>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://kit.fontawesome.com/3c05ca2980.js" crossorigin="anonymous"></script>
+    </head>
 <body>
 
     <div class="navbar">
@@ -20,10 +22,90 @@
     </div>
     
 <div class="heroSec">
-    <video id="indexVideo2" src="src/videoplayback.mp4" loop autoplay muted playsinline></video>
+    
+    <h1 id="backTxt">Front End</h1>
+
+
+    <!-- <video id="indexVideo2" src="src/videoplayback.mp4" loop autoplay muted playsinline></video> -->
+    <model-viewer 
+        src="src/space_boi.glb"
+        autoplay
+        auto-rotate
+        alt="A 3D model"
+        camera-orbit="0deg 75deg 3m"
+        field-of-view="25deg"
+        >
+    </model-viewer>
+
+    <div id="contcs">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-discord"></i>
+        <i class="fa-solid fa-inbox"></i>
+    </div>
 </div>
 
+<div class="project">
+    <h1 id="proLogo">Projects</h1>
+    
+    <div id="theProjects">
+        <h2 id="gr">Upcomming GREAT Projects</h2>
+
+        <div class="card zoroOs">
+            
+            <div class="imgSec lg">
+                
+                <div class="image-group is-active" id="group-1">
+                    <h3 id="num" class="lg">#1</h3>
+                    <h3 id="name">Zoro Os</h3>
+                    <div class="gradient1 img-base" ></div>
+                    <img id="img1" class="img-base" src="src/project/ZORO OS_20251021_171450_0000.png">
+                    <img id="img2" class="img-base" src="src/project/Zero Os_20251021_173645_0000.png">
+                </div>
+
+                <div class="image-group" id="group-2">
+                    <h3 id="num" class="lg">#2</h3>
+                    <h3 id="name">Altus</h3>
+                    <img class="img-base img2" src="src/project/ai-7977960_1280.jpg" style="left: 10%; top: 10%;">
+                    <img class="img-base imgC2" src="src/project/Zero Os_20251021_173645_0000.png" style="left: 40%; top: 40%;">
+                </div>
+
+                <div class="image-group" id="group-3">
+                    <h3 id="num" class="lg">#3</h3>
+                    <h3 id="name">gaming engin</h3>
+                    <img class="img-base img3" src="src/project/top-game-engines-1.webp" style="left: 15%; top: 30%;">
+                    <img class="img-base imgC3" src="src/project/Zero Os_20251021_173645_0000.png" style="left: 30%; top: 20%;">
+                </div>
+
+            </div>
+            
+            <div class="txtsec">
+
+                <div class="text-step" data-group="group-1">
+                    <h2 id="txtHeading">Zoro Os</h2>
+                    <p id="desc">An operating system (OS) is the core software that manages all of a computer's hardware and software resources. It acts as the "manager" of the entire system, handling essential background tasks like memory allocation, file storage, and processing instructions. The OS also provides the user interface (like the Windows desktop or the Android home screen) that lets you launch applications and interact with your device. Examples include Windows, macOS, Linux, and Android.</p>
+                    <div class="btn"><button class="view">View <i class="fa-solid fa-arrow-right"></i></button></div>
+                </div>
+
+                <div class="text-step" data-group="group-2">
+                    <h2 id="txtHeading">Altus</h2>
+                    <p id="desc">An AI assistant is a software agent designed to understand and perform tasks based on natural language commands. Using technologies like machine learning and natural language processing, assistants such as Google Assistant or Amazon's Alexa can answer questions, set reminders, control smart home devices, and manage your schedule. Their core purpose is to act as a helpful, conversational interface between a person and the digital world, simplifying tasks and providing quick access to information.</p>
+                    <div class="btn"><button class="view">View <i class="fa-solid fa-arrow-right"></i></button></div>
+                </div>
+
+                <div class="text-step" data-group="group-3">
+                    <h2 id="txtHeading">gaming engin</h2>
+                    <p id="desc" >A game engine is a complete software framework for building and running video games. Think of it as a massive workshop and toolkit combined; it provides pre-built tools for rendering 2D or 3D graphics, handling physics, playing audio, processing user input, and managing game logic. Engines like Unity or Unreal Engine handle the complex, low-level tasks, allowing developers to focus on creating the unique artwork, story, and gameplay for their project.</p>
+                    <div class="btn"><button class="view">View <i class="fa-solid fa-arrow-right"></i></button></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="main.js"></script>
 </html>

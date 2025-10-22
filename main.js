@@ -1,1 +1,192 @@
-console.log("hii");
+
+// hero sec animations 
+
+gsap.from('#logo',{
+   y: "-50px",
+   opacity: 0,
+   duration: 1
+})
+gsap.from('.navItem',{
+   y: "-50px",
+   opacity: 0,
+   duration: 1
+})
+gsap.from('#contcs',{
+   x: "-50px",
+   opacity: 0,
+   duration: 1
+})
+gsap.from('#backTxt',{
+   y: "50px",
+   opacity: 0,
+   duration: 1
+})
+// parallel in frontend text
+gsap.to('#backTxt',{
+   y: "100px",
+   color: "black",
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"10px",
+        end: "300px",
+        scrub:3
+    }
+
+})
+gsap.from('#proLogo',{
+   x: "-80px",
+   opacity: 0.1,
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"250px",
+        end: "320px",
+        scrub:3
+    }
+
+})
+
+gsap.from('#gr',{
+   y: "80px",
+   opacity: 0.1,
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"260px",
+        end: "330px",
+        scrub:3
+    }
+
+})
+
+gsap.from('.project',{
+   backgroundColor: "black",
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"220px",
+        end: "400px",
+        scrub:3
+    }
+
+})
+
+// the project section 
+gsap.from('.lg',{
+   backgroundColor: "white",
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"260px",
+        end: "400px",
+        scrub:3
+    }
+
+})
+
+gsap.from('.gradient1',{
+   x: "-150px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"30px",
+        end: "600px",
+        scrub:3
+    }
+
+})
+gsap.from('#img2',{
+   y: "80px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"320px",
+        end: "600px",
+        scrub:3
+    }
+
+})
+gsap.from('#img1',{
+   y: "80px",
+   opacity:0,
+   scrollTrigger:{
+        trigger:".heroSec",
+        scroller:"body",
+        markers:false,
+        start:"260px",
+        end: "600px",
+        scrub:3
+    }
+
+})
+
+
+// Wait for the page to load
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // Tell GSAP to use the ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Select all our text steps
+    const textSteps = gsap.utils.toArray(".text-step");
+    
+    // Select all our image groups
+    const imageGroups = gsap.utils.toArray(".image-group");
+
+    // Loop through each text step to create a trigger
+    textSteps.forEach(step => {
+        
+        // Create a ScrollTrigger for this step
+        ScrollTrigger.create({
+            // IMPORTANT: Tell ScrollTrigger to watch the .txtsec scroller
+            scroller: ".txtsec",
+            
+            // The element that triggers the animation
+            trigger: step,
+            
+            // When the top of the step hits 50% of the scroller's height
+            start: "top 50%", 
+            
+            // Uncomment markers to see the start/end points while debugging
+            // markers: true, 
+
+            // Function to run when you scroll INTO the step
+            onEnter: () => {
+                // Get the ID from the step's "data-group" attribute
+                const groupId = step.dataset.group;
+                
+                // Remove .is-active from ALL image groups
+                imageGroups.forEach(group => {
+                    group.classList.remove("is-active");
+                });
+                
+                // Add .is-active to the ONE matching group
+                document.getElementById(groupId).classList.add("is-active");
+            },
+
+            // Function to run when you scroll BACK UP into the step
+            onEnterBack: () => {
+                // Get the ID from the step's "data-group" attribute
+                const groupId = step.dataset.group;
+
+                // Remove .is-active from ALL image groups
+                imageGroups.forEach(group => {
+                    group.classList.remove("is-active");
+                });
+
+                // Add .is-active to the ONE matching group
+                document.getElementById(groupId).classList.add("is-active");
+            }
+        });
+    });
+});
