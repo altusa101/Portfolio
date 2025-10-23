@@ -1,4 +1,10 @@
 
+console.log("TEST: app.js file is connected!");
+import { gsap } from "https://esm.sh/gsap";
+import { SplitText } from "https://esm.sh/gsap/SplitText";
+import { ScrollTrigger } from "https://esm.sh/gsap/ScrollTrigger";
+console.log("TEST: app.js file is connected!");
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 gsap.from('#logo',{
    y: "-50px",
@@ -307,12 +313,13 @@ console.log(split);
 
 gsap.from(split.words,{
     y:"-20",
+    opacity: 0,
     scrollTrigger:{
         trigger:"#aboutMe",
         scroller:"body",
         markers:false,
-        start:"0px",
-        end: "700px",
+        start:"-150px",
+        end: "100px",
         scrub:3,
         markers:true
     }
