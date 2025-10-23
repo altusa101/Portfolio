@@ -147,7 +147,6 @@ body{
     height: 90vh;
     margin: auto;
    text-align: center;
-    overflow: scroll;
     font-family: Arial, Helvetica, sans-serif;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -172,7 +171,6 @@ body{
     height: 50vh;
     background: rgb(213, 213, 213);
     position: relative;
-    
 }
 #num{
   width: 40px;
@@ -198,7 +196,6 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden;
     position: relative;
 }
 
@@ -403,12 +400,13 @@ It now positions images relative to their .image-group parent.
     width: 100vw;
     height: 100vh;
     padding: 40px;
-    background: white;
+    background: #121212;
+    overflow: hidden;
 }
 #headingAB{
     width: 100vw;
     text-align: center;
-    color: black;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -421,23 +419,164 @@ It now positions images relative to their .image-group parent.
     gap: 80px;
 }
 
-.robot{
-    width: 700px;
-    background: transparent;
-   border: 10px solid black;
-   filter: url(#wavy-border-filter);
-}
+
 
 .paragraphABT{
-    width: 500px;
+    width: 600px;
     height: 400px;
     font-size: 26px;
     line-height: 35px;
     font-family:Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+
+
+
+
+#p101{
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    word-spacing: 12px;
+    font-weight: 600;
+    font-size: 28px;
+}
+.innerPara{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 400px;
+    font-size: 26px;
+    line-height: 35px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(34, 34, 34);
+    transform: translate(-4px ,-4px);
+    z-index: 0;
+    word-spacing: 12px;
+    font-weight: 600;
+    font-size: 28px;
+
+}
+.bord{
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
+.bord2{
+    padding: 5px;
+    background-color: rgb(34, 34, 34);
+}
+
+.AbtImgSec{
+    width: 550px;
+    height: 550px;
+    background-color: #1a1a1a;
+   overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+#self{
+    width: 90%;
+   
+}
+
+#boy{
+    width: 250px;
+    position: absolute;
+    animation: boyWave 2s infinite linear 0s;
+}
+
+@keyframes boyWave{
+    0%{transform: translateY(-10px);}
+    50%{transform: translateY(10px);}
+    100%{transform: translateY(-10px);}
 }
 
 .dummySec{
     width: 100vw;
     height: 100vh;
-    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+}
+.rollers{
+    width: 100vw;
+    height: 35vh;
+    background-color: black;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.roll1,.roll3{
+   position: relative;
+    background-color: black;
+    z-index: 2;
+}
+.roll2{
+    background-color: #121212;
+    margin-right: auto;
+    position: relative;
+    z-index: 5;
+}
+
+.roll2::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -16.6vh;
+    width: 33vh;
+    height: 33vh;
+    border-radius: 50%;
+    background-color: #121212;
+}
+
+.roll1::before,.roll3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -16.6vh;
+    width: 33vh;
+    height: 33vh;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+
+
+.contact{
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+}
+
+#skill{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%);
+    opacity: 1;
+    font-size: 40px;
+    padding-left: 40px;
+}
+
+#borders{
+    padding: 8px;
+    background-color: tomato;
 }

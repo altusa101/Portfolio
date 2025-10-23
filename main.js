@@ -304,23 +304,97 @@ gsap.from('#aboutMe',{
 console.log("hii");
 
 
-gsap.registerPlugin(SplitText)
-let split = SplitText.create("#paragraph",{
-    type:"words"
+let split = SplitText.create("#p101",{
+    type: "words,chars"
 })
-console.log(split);
 
 
-gsap.from(split.words,{
-    y:"-20",
+function vanish(){}
+
+gsap.from(split.chars,{
     opacity: 0,
+    stagger: 0.1,
     scrollTrigger:{
         trigger:"#aboutMe",
-        scroller:"body",
-        markers:false,
-        start:"-150px",
-        end: "100px",
-        scrub:3,
-        markers:true
+        // scroller:"body",
+       start: "30% 80%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "60% 50%",
+        scrub:true,
     }
 })
+
+// the legend animation at last about skildsss  hehehhahahahah
+gsap.from('.roll1',{
+   width: 0,
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+   
+        start:"-60%",
+        end: "-8%",
+        scrub:2
+    }
+})
+gsap.from('.roll2',{
+   width: 0,
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+
+        start:"-60%",
+        end: "-8%",
+        scrub:2
+    }
+})
+
+gsap.from('.roll3',{
+   width: 0,
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+       
+        start:"-60%",
+        end: "-8%",
+        scrub:2
+    }
+})
+
+gsap.to('.roll2',{
+   scale: 5,
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+        markers:false,
+        start:"8%",
+        end: "30%",
+        scrub:2,
+        pin:true
+    }
+})
+gsap.to('.roll2',{
+   x:"-110%",
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+        markers:false,
+        start:"10%",
+        end: "75%",
+        scrub:2,
+        pin:true
+    }
+})
+
+gsap.from('#skill',{
+   opacity:0,
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+        markers:false,
+        start:"10%",
+        end: "80%",
+        scrub:2,
+       
+    }
+})
+
+
