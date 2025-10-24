@@ -396,5 +396,315 @@ gsap.from('#skill',{
        
     }
 })
+gsap.from('#plane',{
+   opacity:0,
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+        markers:false,
+        start:"20%",
+        end: "20%",
+        scrub:2,
+       
+    }
+})
 
 
+gsap.to('.roll2',{
+   y: 80,
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+        markers:false,
+        start:"20%",
+        end: "40%",
+        scrub:2,
+
+    }
+})
+
+gsap.from('#my',{
+   y: "-100px",
+   scrollTrigger:{
+        trigger:".dummySec",
+        scroller:"body",
+        markers:false,
+        start:"30%",
+        end: "50%",
+        scrub:2
+    }
+})
+
+let split2 = SplitText.create("#langsIntro",{
+    type: "words",
+    wordsClass: "words"
+})
+
+split2.words.forEach(word=>{
+    let div = document.createElement("DIV")
+    div.classList.add("cover")
+    word.appendChild(div)
+})
+
+
+gsap.to(".cover",{
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger:{
+        trigger:".contact",
+        // scroller:"body",
+       start: "70% 80%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "75% 50%",
+        scrub:true
+    }
+})
+
+gsap.from('#frimg',{
+   x: -8,
+   opacity:0,
+   scrollTrigger:{
+        trigger:".contact",
+        scroller:"body",
+        markers:false,
+        start: "63% 50%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "65% 50%",
+        scrub:2
+    }
+})
+gsap.from('#html',{
+   y: -8,
+   opacity:0,
+   scrollTrigger:{
+        trigger:".contact",
+        scroller:"body",
+        markers:false,
+        start: "56% 50%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "58% 50%",
+        scrub:2,
+        markers: false
+    }
+})
+
+gsap.from('#css',{
+   y: -8,
+   opacity:0,
+   scrollTrigger:{
+        trigger:".contact",
+        scroller:"body",
+        markers:false,
+        start: "55% 50%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "56% 50%",
+        scrub:2
+    }
+})
+
+gsap.from('#js',{
+   y: -8,
+   opacity:0,
+   scrollTrigger:{
+        trigger:".contact",
+        scroller:"body",
+        markers:false,
+        start: "56% 50%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "58% 50%",
+        scrub:2
+    }
+})
+
+gsap.from('#firebase',{
+   y: -8,
+   opacity:0,
+   scrollTrigger:{
+        trigger:".contact",
+        scroller:"body",
+        markers:false,
+        start: "63% 50%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "65% 50%",
+        scrub:2
+    }
+})
+
+gsap.from('#python',{
+   y: -8,
+   opacity:0,
+   scrollTrigger:{
+        trigger:".contact",
+        scroller:"body",
+        markers:false,
+        start: "63% 50%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "65% 50%",
+        scrub:2
+    }
+})
+
+
+
+
+
+
+let proxy = document.querySelector("#mouse")
+
+let proxpos = { x : 0, y : 0} 
+let mouseps = { x : 0, y : 0} 
+
+window.addEventListener("mousemove",(e) =>{
+    mouseps.x = e.x
+    mouseps.y = e.y
+})
+
+let speed = 0.17
+const follow = ()=>{
+
+  proxpos.x += (mouseps.x - proxpos.x) * speed
+  proxpos.y += (mouseps.y - proxpos.y) * speed
+
+  proxy.style.transform = `translate(${proxpos.x}px ,${proxpos.y}px )`
+  window.requestAnimationFrame(follow)
+
+}
+
+follow()
+
+
+gsap.from('#touch',{
+   width: "0px",
+   scrollTrigger:{
+        trigger:".dummy2",
+        scroller:"body",
+        markers:false,
+        start: "-90%",    // Start when the top of #aboutMe hits 80% down the screen
+        end: "-70%",
+        scrub:2,
+    }
+})
+
+let split3 = SplitText.create("#headTouch",{
+    type: "words",
+})
+
+
+
+gsap.from(split3.words,{
+    y:100,
+    opacity:0,
+    stagger: 0.1,
+    scrollTrigger:{
+        trigger:".dummy2",
+        scroller:"body",
+        markers:false,
+        start: "-70%", 
+        end: "-50%",
+        scrub:2
+    }
+})
+
+// animation for the 3 figures 
+// the GSAP oen
+
+gsap.from('.f1',{
+   y: "-100px",
+   opacity: 0,
+   scrollTrigger:{
+        trigger:".dummy2",
+        scroller:"body",
+        markers:false,
+        start:"-40%",
+        end: "-20%",
+        scrub:2,
+        markers: false
+    }
+})
+gsap.from('.f2',{
+   y: "-100px",
+   opacity: 0,
+   scrollTrigger:{
+        trigger:".dummy2",
+        scroller:"body",
+        markers:false,
+        start:"-40%",
+        end: "-20%",
+        scrub:2,
+        markers: false
+    }
+})
+gsap.from('.f3',{
+   y: "-100px",
+   opacity: 0,
+   scrollTrigger:{
+        trigger:".dummy2",
+        scroller:"body",
+        markers:false,
+        start:"-40%",
+        end: "-20%",
+        scrub:2,
+        markers: false
+    }
+})
+
+gsap.from('.form',{
+   y: "100px",
+   opacity: 0,
+   scrollTrigger:{
+        trigger:".dummy2",
+        scroller:"body",
+        markers:false,
+        start:"-40%",
+        end: "-20%",
+        scrub:2,
+        markers: false
+    }
+})
+
+// now the main animation
+
+function shift(){
+    console.log("yes but not rotating");
+    
+    let allFig = document.querySelectorAll(".figure")
+    allFig.forEach(fig =>{
+        fig.style.transform = "rotate(10deg)"
+        fig.style.transition = "1s"
+    })
+}
+
+
+let f1 = document.querySelector(".f1")
+let f2 = document.querySelector(".f2")
+let f3 = document.querySelector(".f3")
+
+function shiftPsedo(a,b,c){
+    a.style.setProperty("---f1Afterleft","150px")
+    a.style.setProperty("---rotation1","-15deg")
+
+    b.style.setProperty("---f2Afterleft","90px")
+    b.style.setProperty("---f2Aftertop","20%")
+    b.style.setProperty("---rotation2","-15deg")
+
+    c.style.setProperty("---f3Afterleft","100px")
+    c.style.setProperty("---rotation3","-15deg")
+
+    a.style.setProperty("---f1beforetop","7%")
+    a.style.setProperty("---f1beforeleft","155px")
+
+    b.style.setProperty("---f2beforetop","7%")
+    b.style.setProperty("---f2beforeleft","110px")
+
+    c.style.setProperty("---f3beforetop","7%")
+    c.style.setProperty("---f3beforeleft","130px")
+}
+
+
+let name = document.querySelector(".inp1")
+name.addEventListener("click",()=>{
+    shift()
+    f1.style.left = "100px"
+    f2.style.left = "300px"
+    f3.style.right = "-100px"
+    shiftPsedo(f1,f2,f3)
+    setTimeout(()=>{
+        document.querySelector("#msg").style.display = "block"
+    },3000)
+    setTimeout(()=>{
+        document.querySelector("#msg").style.display = "none"
+    },9000)
+})
