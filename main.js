@@ -708,3 +708,22 @@ name.addEventListener("click",()=>{
         document.querySelector("#msg").style.display = "none"
     },9000)
 })
+
+
+// code for pointer size over view button
+
+let viewBtns = document.querySelectorAll(".btn2")
+
+viewBtns.forEach(btn=>{
+    btn.addEventListener("mouseover",()=>{
+        btn.style.backgroundColor = "white"
+        btn.style.color= "black"
+    })
+})
+
+viewBtns.forEach(btn=>{
+    btn.addEventListener("mouseout",()=>{
+        btn.style.backgroundColor = "transparent"
+        btn.style.color= "white"
+    })
+})
